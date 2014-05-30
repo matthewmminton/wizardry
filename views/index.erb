@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Wizardry</title>
+  </head>
+
+  <body>
+    <h1>Wizardry</h1>
+
+    <form action="/wizards" method="post">
+      <label for="article_title">Article Title:</label>
+      <input type="text" id="article_title" name="article_title" />
+
+      <label for="article_url">Article URL:</label>
+      <input type="url" id="article_url" name="article_url" />
+
+      <label for="article_description">Article Description:</label>
+      <input type="text" id="article_text" name="article_text" />
+
+      <input type="submit" />
+    </form>
+
+    <ul>
+      <% @articles.each do |article| %>
+        <li><%= article %></li>
+      <% end %>
+    </ul>
+
+  </body>
+</html>

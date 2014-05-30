@@ -19,7 +19,7 @@ post '/wizards' do
   title = params['article_title']
   description = params['article_text']
 
-  CSV.open('articles.csv', 'wb') do |csv|
+  CSV.open('articles.csv', 'ab') do |csv|
     csv << [title, url, description]
   end
 

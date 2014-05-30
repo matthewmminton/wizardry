@@ -22,7 +22,7 @@
 
     <ul>
       <% @articles.each do |hash| %>
-        <li>Title: <%= hash[:title] %>, URL: <%= hash[:url] %>, Description: <%= hash[:description] %></li>
+        <li>Title: <%= hash[:title] %>, URL: <a href="<%= hash[:url] %>" target="_blank"><%= hash[:url] %></a>, Description: <%= hash[:description] %></li>
       <% end %>
     </ul>
 

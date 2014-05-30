@@ -2,7 +2,15 @@ require 'sinatra'
 require 'csv'
 
 get '/' do
-  @articles = File.readlines('articles.csv')
+  @articles = []
+
+  CSV.foreach('articles.csv') do |article|
+    title = article[0]
+    url = article[1]
+    description = article[2]
+    @articles << {title: title, url: url, description: description}
+  end
+
   erb :index
 end
 

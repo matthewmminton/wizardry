@@ -21,8 +21,8 @@
     </form>
 
     <ul>
-      <% @articles.each do |article| %>
-        <li><%= article %></li>
+      <% @articles.each do |hash| %>
+        <li>Title: <%= hash[:title] %>, URL: <%= hash[:url] %>, Description: <%= hash[:description] %></li>
       <% end %>
     </ul>
 
